@@ -1,0 +1,82 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .btn {
+        width: 40px;
+        height: 20px;
+        background-color: #4CAF50;
+        border: none;
+        color: black;
+        font-size: 16px;
+        cursor: pointer;
+        border-style:solid;
+    }
+    .opr{
+            background-color: white;
+            
+    }
+
+    .input{
+        border-style:solid;
+    }
+
+    .checkbox{
+        margin-left: 20px;
+        
+    }
+    </style>
+</head>
+<body>
+<div align="center">
+    <input class="input" type="text" id="angka1"><input class="checkbox" type="checkbox" value="" />
+    <br><br>
+    
+    <input class="input" type="text" id="angka2"><input class="checkbox" type="checkbox" value="" />
+    <br><br>
+
+    <input class="input" type="text" id="angka3"><input class="checkbox" type="checkbox" value="" />
+    <br><br>
+
+    <button class="btn opr" onclick="ftambah()">+</button>
+    <button class="btn opr" onclick="fkurang()">-</button>
+    <button class="btn opr" onclick="fkali()">*</button>
+    <button class="btn opr" onclick="fbagi()">/</button>
+
+    <br><br>
+    <hr align="center" width="18%" size="5" noshade="black" color="black">
+    <label for="">Hasil</label>
+    <input class="input" type="text" id="hasil">
+
+    <br><br>
+
+    
+    
+</div>
+    <script>
+        var angka1 = document.getElementById("angka1");
+        var angka2 = document.getElementById("angka2");
+        var hasil = document.getElementById("hasil");
+
+        function ftambah(){
+            hasil.value = Number(angka1.value) + Number(angka2.value) + Number(angka3.value);
+        }
+
+        function fkurang(){
+            hasil.value = Number(angka1.value) - Number(angka2.value) - Number(angka3.value);
+        }
+
+        function fkali(){
+            hasil.value = Number(angka1.value) * Number(angka2.value) * Number(angka3.value);
+        }
+
+        function fbagi(){
+            hasil.value = Number(angka1.value) / Number(angka2.value) / Number(angka3.value);
+        }
+
+
+    </script>
+</body>
+</html>
